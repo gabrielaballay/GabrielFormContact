@@ -109,95 +109,34 @@
 .carousel-control-next-icon.bg-dark:hover {
   opacity: 1;
 }
-/* ==== PROYECTOS ==== */
-#proyectos {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
 
-#proyectos .card {
-  border: none;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#proyectos .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-#proyectos .card-body {
-  padding: 1.5rem;
-  text-align: left;
-}
-
-#proyectos .card-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #222;
-}
-
-#proyectos .card-text {
-  font-size: 1rem;
-  color: #555;
-}
-
+/* Asegura que las imágenes del carrusel sean totalmente visibles */
 .carousel-img {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain; /* Mantiene proporción y evita recorte */
+  max-height: 500px; /* Altura máxima en pantallas grandes */
+  background-color: #000; /* Opcional: da fondo si hay espacio vacío */
 }
 
-/* ==== RESPONSIVE ==== */
-@media (max-width: 992px) {
-  #proyectos .card-body {
-    text-align: center;
-  }
-
-  .carousel-img {
-    height: 300px;
-  }
-}
-
+/* En pantallas pequeñas (celulares) ajusta mejor la altura */
 @media (max-width: 768px) {
-  #proyectos {
-    padding: 2rem 1rem;
-  }
-
   .carousel-img {
-    height: 220px;
+    max-height: 300px; /* Más pequeña en móvil */
   }
 
-  #proyectos .card-title {
-    font-size: 1.2rem;
-  }
-
-  #proyectos .card-text {
-    font-size: 0.95rem;
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-  }
-}
-
-@media (max-width: 480px) {
-  .carousel-img {
-    height: 180px;
-  }
-
-  #proyectos .card {
-    margin-bottom: 2rem;
-  }
-
-  #proyectos .card-body {
+  .card-body {
     padding: 1rem;
   }
-}
 
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
     </style>
 </head>
 <body>
@@ -299,6 +238,7 @@
         Incluye procesamiento por lotes, logs de auditoría y validación de consistencia.
       </p>
       <p><strong>Tecnologías:</strong> .NET 8, EF Core, Oracle, PostgreSQL, EF Extensions</p>
+      <!-- <a href="#" class="btn btn-outline-primary btn-sm">Ver documentación</a> -->
     </div>
   </div>
 
@@ -325,6 +265,7 @@
         Manejo de confirmaciones (ACK) y reintentos automáticos.
       </p>
       <p><strong>Tecnologías:</strong> .NET 8, RabbitMQ, MediatR, CQRS, Docker</p>
+      <!-- <a href="#" class="btn btn-outline-primary btn-sm">Ver demo</a> -->
     </div>
   </div>
 
@@ -362,6 +303,7 @@
         con Entity Framework Core, LINQ to Objects o cualquier fuente de datos que soporte expresiones.
       </p>
       <p><strong>Tecnologías:</strong> .NET 8, EntityFramework, PostgreSQL</p>
+      <!--<a href="#" class="btn btn-outline-primary btn-sm">Ver repositorio</a>-->
     </div>
   </div>
 </section>
