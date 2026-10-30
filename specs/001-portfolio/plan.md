@@ -323,7 +323,7 @@ Sin requisitos huérfanos y sin componentes del plan que no respondan a un RF/RN
 ### Supuestos
 
 - [SUPUESTO] Se conservan los 4 proyectos y sus imágenes; solo se ajustan textos.
-- [CONFIRMADO] El sitio se despliega en `https://gabrielaballay.github.io/GabrielFormContact/` (GitHub Pages de proyecto), por lo que `base: '/GabrielFormContact/'`; el workflow `.github/workflows/deploy.yml` publica `dist/`.
+- [CONFIRMADO] El sitio se despliega en `https://gabrielaballay.github.io/GabrielFormContact/` (GitHub Pages de proyecto), por lo que `base: '/GabrielFormContact/'`; el workflow `.github/workflows/deploy.yml` publica `dist/` desde `main`.
 - [SUPUESTO] El endpoint funciona igual desde un origen `http://localhost` y desde el dominio final.
 - [SUPUESTO] No hay requisitos de analítica ni cookies.
 
@@ -344,4 +344,4 @@ Sin requisitos huérfanos y sin componentes del plan que no respondan a un RF/RN
 6. **Footer:** correo `aballaygabriel@gmail.com` + LinkedIn `https://linkedin.com/in/gabriel-aballay-a2746a164`.
 7. **Validación:** sin framework de tests; checklist manual + `npm run build`/`preview` + Lighthouse.
 8. **Copy:** reescrituras de "Servicios" y de los `alt` de imágenes (texto final con revisión previa del usuario).
-9. **Despliegue:** `https://gabrielaballay.github.io/GabrielFormContact/` (Pages de proyecto) → `base: '/GabrielFormContact/'`; workflow `.github/workflows/deploy.yml`.
+9. **Despliegue:** `https://gabrielaballay.github.io/GabrielFormContact/` (Pages de proyecto) → `base: '/GabrielFormContact/'`; workflow `.github/workflows/deploy.yml` desde `main`.

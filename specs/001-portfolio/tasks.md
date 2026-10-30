@@ -107,7 +107,7 @@ Plan: `specs/001-portfolio/plan.md`
   - Estimación: ~30 min.
   - Resultado real (2026-10-30): checklist §8 ejecutado sobre `npm run preview` (puerto 4317). 10/11 ítems aprobados; ítem 3 (camino feliz del formulario) **bloqueado por CORS externo** (preflight 400; solo `https://gabrielaballay.github.io` autorizado). Lighthouse móvil: LCP 1,696 s, CLS 0,00534, 0 errores de consola; Performance 99, Accessibility 100, Best Practices 100, SEO 83. Build OK (12 módulos); 8 imágenes en `dist/images/` con `principal.jpg`; 0 referencias a `Principal.jpg`, `cdn.jsdelivr.net`, `bootstrap`, `data-bs`, `alert(` o `carousel` en `index.html`/`src/`/`dist/`.
   - Revisión independiente integral: se ejecuta a continuación sobre T1–T10.
-  - Corrección de despliegue 2026-10-30: `base` `/GabrielFormContact/`, workflow `.github/workflows/deploy.yml`, `public/.nojekyll` y `data-src` relativos; validación de la URL pública pendiente.
+  - Corrección de despliegue 2026-10-30: `base` `/GabrielFormContact/`, workflow `.github/workflows/deploy.yml` desde `main`, `public/.nojekyll` y `data-src` relativos; validación de la URL pública pendiente.
 
 ## Cobertura
 

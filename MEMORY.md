@@ -24,7 +24,7 @@ Estado persistente del proceso SDD. Registrar solo decisiones confirmadas y resu
 - Proyectos: 4 fichas; proyecto 4 unificado con dos sub-bloques.
 - Formulario: se conserva URL, `code` y token actuales; validación en cliente y estados accesibles.
 - Footer: `aballaygabriel@gmail.com` y `https://linkedin.com/in/gabriel-aballay-a2746a164`.
-- Deploy en `gabrielaballay.github.io` (raíz) → `base: '/'`.
+- Deploy en `https://gabrielaballay.github.io/GabrielFormContact/` (Pages de proyecto) → `base: '/GabrielFormContact/'`; workflow desde `main`.
 - Sin framework de tests; validación con build/preview, checklist y Lighthouse.
 - Idioma: español.
 
@@ -42,7 +42,7 @@ Estado persistente del proceso SDD. Registrar solo decisiones confirmadas y resu
 - Repositorio git publicado: rama `portfolio` en `origin` → `https://github.com/gabrielaballay/GabrielFormContact/tree/portfolio`, commits `ef15ae1` (implementación) y `01e2c14` (docs). `main` no fue tocada; push completado (2026-10-30).
 - `.gitignore` excluye `node_modules/` y `dist/`; el commit incluye 32 archivos (src, public/images, docs, specs, configuración).
 
-- **Deploy:** GitHub Pages de proyecto en `https://gabrielaballay.github.io/GabrielFormContact/`; `base` cambiado a `/GabrielFormContact/`; workflow `.github/workflows/deploy.yml` (build `dist/` + deploy). Validación de la URL pública pendiente. La Function App respondió **503** (“Function host is not running”) durante la validación: el backend debe arrancarse.
+- **Deploy:** GitHub Pages de proyecto en `https://gabrielaballay.github.io/GabrielFormContact/`; `base` cambiado a `/GabrielFormContact/`; workflow `.github/workflows/deploy.yml` desde `main` (build `dist/` + deploy). Validación de la URL pública pendiente. La Function App respondió **503** (“Function host is not running”) durante la validación: el backend debe arrancarse.
 
 ## Próximo paso propuesto
 
