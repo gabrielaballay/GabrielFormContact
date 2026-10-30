@@ -1,0 +1,242 @@
+/* ==========================================================================
+   Reset, tipografía base, layout y utilidades (plan §3.3, §3.4, §7)
+   ========================================================================== */
+
+/* --- Reset mínimo -------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+fieldset {
+  margin: 0;
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  color: var(--cobalto);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color var(--duracion-rapida) var(--curva-salida);
+}
+
+a:hover {
+  color: var(--cobalto-hondo);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* --- Base tipográfica ---------------------------------------------------- */
+body {
+  min-height: 100vh;
+  background-color: var(--papel);
+  color: var(--tinta);
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-cuerpo);
+  font-weight: var(--peso-cuerpo);
+  line-height: var(--interlineado-cuerpo);
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-wrap: break-word;
+}
+
+/* URLs, identificadores y nombres de tecnología largos no deben desbordar. */
+a,
+code,
+kbd,
+samp,
+.texto-tecnico {
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fuente-titulos);
+  color: var(--tinta);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--texto-display);
+  font-weight: var(--peso-display);
+  line-height: var(--interlineado-display);
+  letter-spacing: var(--tracking-display);
+}
+
+h2 {
+  font-size: var(--texto-h2);
+  font-weight: var(--peso-h2);
+  line-height: var(--interlineado-titulo);
+  letter-spacing: var(--tracking-titulo);
+}
+
+h3 {
+  font-size: var(--texto-h3);
+  font-weight: var(--peso-h3);
+  line-height: 1.3;
+}
+
+h4,
+h5,
+h6 {
+  font-size: var(--texto-cuerpo);
+  font-weight: var(--peso-fuerte);
+  line-height: 1.35;
+}
+
+p {
+  max-width: var(--medida-texto);
+}
+
+/* La interfaz (controles y etiquetas) usa Archivo; los párrafos, Newsreader. */
+button,
+input,
+select,
+textarea,
+label {
+  font-family: var(--fuente-titulos);
+}
+
+strong,
+b {
+  font-weight: var(--peso-fuerte);
+}
+
+small,
+.texto-meta {
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-meta);
+  font-weight: var(--peso-meta);
+}
+
+hr {
+  height: var(--grosor-linea);
+  margin: 0;
+  border: 0;
+  background-color: var(--linea);
+}
+
+::selection {
+  background-color: var(--cobalto);
+  color: var(--blanco);
+}
+
+/* --- Foco visible (nunca `outline: none` sin reemplazo) ------------------ */
+:focus-visible {
+  outline: var(--foco-grosor) solid var(--foco-color);
+  outline-offset: var(--foco-offset);
+}
+
+/* --- Layout -------------------------------------------------------------- */
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-contenedor);
+  margin-inline: auto;
+  padding-inline: var(--padding-lateral);
+}
+
+.seccion {
+  padding-block: var(--padding-seccion);
+}
+
+/* Rejilla de 12 columnas del plan §3.4, lista para T3–T9. */
+.rejilla-12 {
+  display: grid;
+  grid-template-columns: repeat(var(--columnas), minmax(0, 1fr));
+  gap: var(--gutter);
+}
+
+.rejilla-12 > * {
+  min-width: 0;
+}
+
+/* --- Utilidades mínimas -------------------------------------------------- */
+.texto-secundario {
+  color: var(--tinta-suave);
+}
+
+.numeros-tabulares {
+  font-variant-numeric: tabular-nums;
+}
+
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Movimiento reducido ------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

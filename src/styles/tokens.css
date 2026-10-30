@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Tokens del sistema visual — "Capas" (plan §3.2, §3.3, §3.4)
+   Única fuente de verdad para color, tipografía, espaciado, radios y foco.
+   Los breakpoints (480 / 768 / 1024 px) se declaran en componentes porque
+   las media queries no admiten variables CSS.
+   ========================================================================== */
+
+:root {
+  /* --- Paleta (plan §3.2) ------------------------------------------------ */
+  --papel: #edeee9; /* Fondo de página */
+  --papel-alto: #f8f8f5; /* Superficies elevadas (formulario, imágenes) */
+  --tinta: #152029; /* Texto principal y títulos */
+  --tinta-suave: #4c5a63; /* Texto secundario y metadatos */
+  --cobalto: #2049c8; /* Enlaces, CTA y anillo de foco */
+  --cobalto-hondo: #16307f; /* Hover/active del CTA */
+  --linea: #c6cbc3; /* Bordes y separadores */
+  --exito: #2f6b46; /* Confirmación de envío */
+  --error: #a32b2b; /* Errores de validación y de red */
+  --blanco: #ffffff;
+  --transparente: transparent;
+
+  /* --- Tipografía (plan §3.3) ------------------------------------------- */
+  --fuente-titulos: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --fuente-texto: "Newsreader", Georgia, "Times New Roman", serif;
+
+  --texto-display: clamp(2.75rem, 7vw, 4.5rem);
+  --texto-h2: clamp(1.9rem, 3.4vw, 2.6rem);
+  --texto-h3: 1.25rem;
+  --texto-cuerpo: 1.0625rem;
+  --texto-meta: 0.875rem;
+
+  --peso-display: 700;
+  --peso-h2: 650;
+  --peso-h3: 600;
+  --peso-cuerpo: 400;
+  --peso-meta: 500;
+  --peso-fuerte: 600;
+
+  --interlineado-display: 1.05;
+  --interlineado-titulo: 1.15;
+  --interlineado-cuerpo: 1.6;
+
+  --tracking-display: -0.02em;
+  --tracking-titulo: -0.01em;
+  --medida-texto: 68ch;
+
+  /* --- Layout (plan §3.4) ----------------------------------------------- */
+  --ancho-contenedor: 1120px;
+  --columnas: 12;
+  --gutter: 24px;
+  --padding-lateral: clamp(20px, 5vw, 48px);
+  --padding-seccion: clamp(48px, 6vw, 80px);
+
+  /* --- Espaciado (base 4 px) -------------------------------------------- */
+  --esp-1: 4px;
+  --esp-2: 8px;
+  --esp-3: 12px;
+  --esp-4: 16px;
+  --esp-5: 24px;
+  --esp-6: 32px;
+  --esp-7: 48px;
+  --esp-8: 64px;
+  --esp-9: 96px;
+
+  /* --- Bordes y radios --------------------------------------------------- */
+  --grosor-linea: 1px;
+  --borde-sutil: var(--grosor-linea) solid var(--linea);
+  --radio-control: 4px; /* Controles (botones, campos) */
+  --radio-superficie: 10px; /* Solo imágenes y contenedor del formulario */
+  --radio-redondo: 999px;
+
+  /* --- Foco visible (plan §7, accesibilidad) ----------------------------- */
+  --foco-grosor: 2px;
+  --foco-color: var(--cobalto);
+  --foco-offset: 3px;
+
+  /* --- Movimiento -------------------------------------------------------- */
+  --duracion-rapida: 120ms;
+  --duracion-media: 180ms;
+  --curva-salida: cubic-bezier(0.2, 0, 0.2, 1);
+
+  /* --- Elevación (uso puntual, nunca una sombra para todo) --------------- */
+  --sombra-elevada: 0 1px 2px rgba(21, 32, 41, 0.06),
+    0 12px 32px rgba(21, 32, 41, 0.08);
+}
