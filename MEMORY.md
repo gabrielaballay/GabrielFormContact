@@ -39,8 +39,9 @@ Estado persistente del proceso SDD. Registrar solo decisiones confirmadas y resu
 - 8 imágenes en `public/images/` y `dist/images/`; `principal.jpg` en minúscula; sin referencias a `Principal.jpg` en código/build.
 - Sin restos de Bootstrap, `cdn.jsdelivr.net`, carrusel ni `alert()` en `index.html`/`src/`/`dist/`.
 - CORS del endpoint: `https://gabrielaballay.github.io` autorizado; `localhost:4173/5173` rechazado (preflight 400).
-- No es repositorio git; no hay `git status`/`git diff`.
+- Repositorio git local inicializado: commit `ef15ae1` ("Portafolio Vite: implementación completa (spec 001)"), rama `portfolio`, remote `origin` → `https://github.com/gabrielaballay/GabrielFormContact.git`. `main` no fue tocada. **Push pendiente**: el entorno bloqueó el comando de red (`Permission denied: shell`).
+- `.gitignore` excluye `node_modules/` y `dist/`; el commit incluye 32 archivos (src, public/images, docs, specs, configuración).
 
 ## Próximo paso propuesto
 
-- T8 (post-despliegue); luego `/sdd-validate` para cerrar la spec 001.
+- Push de la rama `portfolio` a GitHub; luego T8 (post-despliegue) y `/sdd-validate` para cerrar la spec 001.
