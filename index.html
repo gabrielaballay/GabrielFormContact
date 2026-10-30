@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Aballay | Desarrollador .NET</title>
+    <link rel="icon" href="data:,">
+</head>
+<body>
+
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="contenedor site-header__interior">
+            <a class="site-header__marca" href="#inicio">Gabriel Aballay</a>
+
+            <button
+                type="button"
+                class="menu-toggle"
+                aria-expanded="false"
+                aria-controls="menu-principal"
+                aria-label="Abrir menú"
+            >
+                <span class="menu-toggle__icono" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span>Menú</span>
+            </button>
+
+            <nav id="menu-principal" class="nav-principal" aria-label="Navegación principal">
+                <ul class="nav-principal__lista">
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <a class="boton boton--primario nav-principal__cta" href="#contacto">Hablemos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+        <!-- HERO -->
+        <section id="inicio" class="hero seccion" aria-labelledby="hero-titulo">
+            <div class="contenedor rejilla-12 hero__rejilla">
+                <div class="hero__texto">
+                    <p class="hero__rol">Desarrollador .NET · Azure · Arquitectura limpia</p>
+                    <h1 id="hero-titulo">APIs y sistemas .NET con arquitectura clara</h1>
+                    <p class="hero__valor">
+                        Diseño y construyo APIs y sistemas .NET organizados en capas, con foco en
+                        código mantenible, integraciones claras y resultados que funcionan en producción.
+                    </p>
+                    <div class="hero__acciones">
+                        <a class="boton boton--primario" href="#contacto">Hablemos de tu proyecto</a>
+                        <a class="boton boton--secundario" href="#proyectos">Ver proyectos</a>
+                    </div>
+                </div>
+
+                <div class="hero__diagrama">
+                    <svg class="pipeline" viewBox="0 0 400 360" role="img" aria-labelledby="pipeline-titulo">
+                        <title id="pipeline-titulo">Pipeline en cuatro capas conectadas de arriba hacia abajo: Api, Application, Domain e Infrastructure.</title>
+                        <defs>
+                            <marker
+                                id="pipeline-flecha"
+                                viewBox="0 0 6 6"
+                                refX="5"
+                                refY="3"
+                                markerWidth="6"
+                                markerHeight="6"
+                                orient="auto"
+                            >
+                                <path class="pipeline__flecha" d="M0,0 L6,3 L0,6 Z"></path>
+                            </marker>
+                        </defs>
+
+                        <g aria-hidden="true">
+                            <path class="pipeline__conexion" d="M200 80 V 100" marker-end="url(#pipeline-flecha)"></path>
+                            <path class="pipeline__conexion" d="M200 164 V 184" marker-end="url(#pipeline-flecha)"></path>
+                            <path class="pipeline__conexion" d="M200 248 V 268" marker-end="url(#pipeline-flecha)"></path>
+                        </g>
+
+                        <g class="pipeline__capa">
+                            <rect class="pipeline__caja" x="40" y="20" width="320" height="60" rx="8"></rect>
+                            <rect class="pipeline__acento" x="40" y="20" width="4" height="60" rx="2"></rect>
+                            <text class="pipeline__nombre" x="64" y="46">Api</text>
+                            <text class="pipeline__tecnologias" x="64" y="66">Controllers · endpoints HTTP</text>
+                        </g>
+
+                        <g class="pipeline__capa">
+                            <rect class="pipeline__caja" x="40" y="104" width="320" height="60" rx="8"></rect>
+                            <rect class="pipeline__acento" x="40" y="104" width="4" height="60" rx="2"></rect>
+                            <text class="pipeline__nombre" x="64" y="130">Application</text>
+                            <text class="pipeline__tecnologias" x="64" y="150">Casos de uso · validación</text>
+                        </g>
+
+                        <g class="pipeline__capa">
+                            <rect class="pipeline__caja" x="40" y="188" width="320" height="60" rx="8"></rect>
+                            <rect class="pipeline__acento" x="40" y="188" width="4" height="60" rx="2"></rect>
+                            <text class="pipeline__nombre" x="64" y="214">Domain</text>
+                            <text class="pipeline__tecnologias" x="64" y="234">Entidades · reglas de negocio</text>
+                        </g>
+
+                        <g class="pipeline__capa">
+                            <rect class="pipeline__caja" x="40" y="272" width="320" height="60" rx="8"></rect>
+                            <rect class="pipeline__acento" x="40" y="272" width="4" height="60" rx="2"></rect>
+                            <text class="pipeline__nombre" x="64" y="298">Infrastructure</text>
+                            <text class="pipeline__tecnologias" x="64" y="318">EF Core · RabbitMQ · servicios</text>
+                        </g>
+                    </svg>
+
+                    <ul class="pipeline-lista">
+                        <li class="pipeline-lista__item">
+                            <span class="pipeline-lista__nombre">Api</span>
+                            <span class="pipeline-lista__tecnologias">Controllers · endpoints HTTP</span>
+                        </li>
+                        <li class="pipeline-lista__item">
+                            <span class="pipeline-lista__nombre">Application</span>
+                            <span class="pipeline-lista__tecnologias">Casos de uso · validación</span>
+                        </li>
+                        <li class="pipeline-lista__item">
+                            <span class="pipeline-lista__nombre">Domain</span>
+                            <span class="pipeline-lista__tecnologias">Entidades · reglas de negocio</span>
+                        </li>
+                        <li class="pipeline-lista__item">
+                            <span class="pipeline-lista__nombre">Infrastructure</span>
+                            <span class="pipeline-lista__tecnologias">EF Core · RabbitMQ · servicios</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MI -->
+        <section id="sobre-mi" class="seccion" aria-labelledby="sobre-mi-titulo">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <h2 id="sobre-mi-titulo">Sobre mí</h2>
+                    <p class="seccion-encabezado__contexto">Perfil, enfoque y forma de trabajo</p>
+                </div>
+
+                <div class="sobre-mi">
+                    <p class="sobre-mi__resumen">                        
+                        Soy desarrollador de software con experiencia principalmente en el ecosistema .NET, trabajando en el desarrollo de APIs, integraciones y soluciones backend. Tengo conocimientos en arquitectura limpia, Entity Framework, MediatR y Result-Oriented Programming, además de experiencia en testing unitario y diseño de soluciones mantenibles.
+                        <br/>Trabajo con bases de datos relacionales como SQL Server, PostgreSQL y Oracle, así como con bases de datos NoSQL como MongoDB. También cuento con conocimientos de tecnologías frontend como JavaScript, TypeScript, React, HTML y CSS.
+                        <br/>Utilizo herramientas como Git, Azure DevOps, Docker y Postman en mis procesos de desarrollo. Además, incorporo herramientas de inteligencia artificial como OpenCode para asistir y optimizar distintas etapas del trabajo.
+                        <br/>Me interesa seguir aprendiendo, mejorar continuamente mis prácticas de desarrollo y construir soluciones de software sólidas, mantenibles y que aporten valor real.
+                    </p>
+                    
+                    <dl class="sobre-mi__datos">
+                        <div class="sobre-mi__dato">
+                            <dt>Enfoque</dt>
+                            <dd>Arquitectura limpia y separación clara de capas.</dd>
+                        </div>
+                        <div class="sobre-mi__dato">
+                            <dt>Dominio</dt>
+                            <dd>APIs REST e integraciones entre sistemas y bases de datos.</dd>
+                        </div>
+                        <div class="sobre-mi__dato">
+                            <dt>Forma de trabajo</dt>
+                            <dd>Orientada a resultados: soluciones sólidas y escalables.</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios" class="seccion" aria-labelledby="servicios-titulo">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <h2 id="servicios-titulo">Servicios</h2>
+                    <p class="seccion-encabezado__contexto">Del diseño de la API a la entrega ordenada</p>
+                </div>
+
+                <dl class="servicios">
+                    <div class="servicio">
+                        <dt class="servicio__termino">
+                            <span class="servicio__glifo" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 3 3 7.5 12 12l9-4.5L12 3Z"></path>
+                                    <path d="m3 12 9 4.5 9-4.5"></path>
+                                    <path d="m3 16.5 9 4.5 9-4.5"></path>
+                                </svg>
+                            </span>
+                            <span class="servicio__nombre">APIs REST .NET 8</span>
+                        </dt>
+                        <dd class="servicio__descripcion">
+                            Diseño y desarrollo de APIs escalables con Clean Architecture,
+                            FluentValidation y MediatR.
+                        </dd>
+                    </div>
+
+                    <div class="servicio">
+                        <dt class="servicio__termino">
+                            <span class="servicio__glifo" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="5" cy="12" r="2.5"></circle>
+                                    <circle cx="19" cy="6" r="2.5"></circle>
+                                    <circle cx="19" cy="18" r="2.5"></circle>
+                                    <path d="M7.4 10.9 16.6 7.1"></path>
+                                    <path d="M7.4 13.1 16.6 16.9"></path>
+                                </svg>
+                            </span>
+                            <span class="servicio__nombre">Integraciones</span>
+                        </dt>
+                        <dd class="servicio__descripcion">
+                            Integración de bases de datos (PostgreSQL, SQL Server, Oracle) y mensajería
+                            con RabbitMQ.
+                        </dd>
+                    </div>
+
+                    <div class="servicio">
+                        <dt class="servicio__termino">
+                            <span class="servicio__glifo" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="4" width="5" height="16" rx="1"></rect>
+                                    <rect x="9.5" y="4" width="5" height="10" rx="1"></rect>
+                                    <rect x="16" y="4" width="5" height="13" rx="1"></rect>
+                                </svg>
+                            </span>
+                            <span class="servicio__nombre">Azure DevOps</span>
+                        </dt>
+                        <dd class="servicio__descripcion">
+                            Organizo la entrega con tableros de tareas, repositorios y una estrategia de
+                            branching clara, para que el equipo trabaje con orden y trazabilidad.
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="seccion" aria-labelledby="proyectos-titulo">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <h2 id="proyectos-titulo">Proyectos</h2>
+                    <p class="seccion-encabezado__contexto">Sistemas, migraciones y paquetes construidos con .NET</p>
+                </div>
+
+                <div class="proyectos">
+                    <!-- PROYECTO 1 — Destacado -->
+                    <article class="proyecto proyecto--destacado" aria-labelledby="proyecto-ventas-titulo">
+                        <div class="proyecto__contenido">
+                            <p class="proyecto__etiqueta">Proyecto destacado</p>
+                            <h3 id="proyecto-ventas-titulo">Sistema de Gestión de Ventas</h3>
+                            <p class="proyecto__descripcion">
+                                Aplicación en .NET 8 con arquitectura limpia, MediatR y patrón
+                                Result-Oriented Programming (ROP). Implementa autenticación,
+                                validaciones con FluentValidation y exportación PDF de reportes,
+                                además de una licencia que se activa después de un período de prueba.
+                            </p>
+                            <ul class="chips" aria-label="Tecnologías del Sistema de Gestión de Ventas">
+                                <li class="chip">.NET 8</li>
+                                <li class="chip">EF Core</li>
+                                <li class="chip">PostgreSQL</li>
+                                <li class="chip">MediatR</li>
+                                <li class="chip">ROP</li>
+                            </ul>
+                        </div>
+
+                        <div class="proyecto__medios">
+                            <div class="proyecto__marco">
+                                <img
+                                    id="proyecto-ventas-imagen"
+                                    class="proyecto__imagen"
+                                    src="/images/principal.jpg"
+                                    alt="Pantalla principal del Sistema de Gestión de Ventas"
+                                    width="4000"
+                                    height="1800"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </div>
+
+                            <div
+                                class="proyecto__miniaturas"
+                                role="group"
+                                aria-label="Capturas del Sistema de Gestión de Ventas"
+                            >
+                                <button
+                                    type="button"
+                                    class="miniatura"
+                                    aria-pressed="true"
+                                    aria-controls="proyecto-ventas-imagen"
+                                    data-src="/images/principal.jpg"
+                                    data-alt="Pantalla principal del Sistema de Gestión de Ventas"
+                                >
+                                    <img
+                                        src="/images/principal.jpg"
+                                        alt="Pantalla principal del Sistema de Gestión de Ventas"
+                                        width="4000"
+                                        height="1800"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </button>
+                                <button
+                                    type="button"
+                                    class="miniatura"
+                                    aria-pressed="false"
+                                    aria-controls="proyecto-ventas-imagen"
+                                    data-src="/images/venta.png"
+                                    data-alt="Pantalla de Punto de Venta del Sistema de Gestión de Ventas con el carrito y el total de la venta"
+                                >
+                                    <img
+                                        src="/images/venta.png"
+                                        alt="Pantalla de Punto de Venta del Sistema de Gestión de Ventas con el carrito y el total de la venta"
+                                        width="1326"
+                                        height="564"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </button>
+                                <button
+                                    type="button"
+                                    class="miniatura"
+                                    aria-pressed="false"
+                                    aria-controls="proyecto-ventas-imagen"
+                                    data-src="/images/venta2.png"
+                                    data-alt="Pantalla de activación de licencia del Sistema de Gestión de Ventas tras el período de prueba"
+                                >
+                                    <img
+                                        src="/images/venta2.png"
+                                        alt="Pantalla de activación de licencia del Sistema de Gestión de Ventas tras el período de prueba"
+                                        width="1271"
+                                        height="516"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 2 -->
+                    <article class="proyecto" aria-labelledby="proyecto-migracion-titulo">
+                        <div class="proyecto__contenido">
+                            <h3 id="proyecto-migracion-titulo">Migrador Oracle → PostgreSQL</h3>
+                            <p class="proyecto__descripcion">
+                                Herramienta para migrar datos masivos desde Oracle hacia PostgreSQL
+                                utilizando EF Core y EntityFramework.Extensions. Incluye procesamiento
+                                por lotes, logs de auditoría y validación de consistencia.
+                            </p>
+                            <ul class="chips" aria-label="Tecnologías del migrador Oracle a PostgreSQL">
+                                <li class="chip">.NET 8</li>
+                                <li class="chip">EF Core</li>
+                                <li class="chip">Oracle</li>
+                                <li class="chip">PostgreSQL</li>
+                                <li class="chip">EF Extensions</li>
+                            </ul>
+                        </div>
+
+                        <div class="proyecto__medios">
+                            <div class="proyecto__marco">
+                                <img
+                                    id="proyecto-migracion-imagen"
+                                    class="proyecto__imagen"
+                                    src="/images/migracion1.png"
+                                    alt="Proceso de migración de datos de Oracle a PostgreSQL"
+                                    width="1536"
+                                    height="1024"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </div>
+
+                            <div
+                                class="proyecto__miniaturas"
+                                role="group"
+                                aria-label="Capturas del migrador Oracle a PostgreSQL"
+                            >
+                                <button
+                                    type="button"
+                                    class="miniatura"
+                                    aria-pressed="true"
+                                    aria-controls="proyecto-migracion-imagen"
+                                    data-src="/images/migracion1.png"
+                                    data-alt="Proceso de migración de datos de Oracle a PostgreSQL"
+                                >
+                                    <img
+                                        src="/images/migracion1.png"
+                                        alt="Proceso de migración de datos de Oracle a PostgreSQL"
+                                        width="1536"
+                                        height="1024"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </button>
+                                <button
+                                    type="button"
+                                    class="miniatura"
+                                    aria-pressed="false"
+                                    aria-controls="proyecto-migracion-imagen"
+                                    data-src="/images/migracion2.png"
+                                    data-alt="Progreso de la migración de datos: 74 % de registros migrados"
+                                >
+                                    <img
+                                        src="/images/migracion2.png"
+                                        alt="Progreso de la migración de datos: 74 % de registros migrados"
+                                        width="1536"
+                                        height="1024"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 3 -->
+                    <article class="proyecto proyecto--invertido" aria-labelledby="proyecto-rabbitmq-titulo">
+                        <div class="proyecto__contenido">
+                            <h3 id="proyecto-rabbitmq-titulo">Integración de Mensajería con RabbitMQ</h3>
+                            <p class="proyecto__descripcion">
+                                Proyecto de arquitectura distribuida donde se implementan colas de
+                                mensajería para la comunicación entre microservicios, con manejo de
+                                confirmaciones (ACK) y reintentos automáticos.
+                            </p>
+                            <ul class="chips" aria-label="Tecnologías de la integración con RabbitMQ">
+                                <li class="chip">.NET 8</li>
+                                <li class="chip">RabbitMQ</li>
+                                <li class="chip">MediatR</li>
+                                <li class="chip">CQRS</li>
+                                <li class="chip">Docker</li>
+                            </ul>
+                        </div>
+
+                        <div class="proyecto__medios">
+                            <div class="proyecto__marco">
+                                <img
+                                    class="proyecto__imagen"
+                                    src="/images/rabbit1.png"
+                                    alt="Integración de mensajería con RabbitMQ"
+                                    width="1536"
+                                    height="1024"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PROYECTO 4 — Un proyecto con dos sub-bloques -->
+                    <article class="proyecto proyecto--compuesto" aria-labelledby="proyecto-nuget-titulo">
+                        <div class="proyecto__contenido">
+                            <h3 id="proyecto-nuget-titulo">Creación de paquetes NuGet (Azure Artifacts)</h3>
+                            <p class="proyecto__descripcion">
+                                Mapeador de objetos y constructor de filtros dinámicos, publicados
+                                como paquetes NuGet en Azure Artifacts.
+                            </p>
+                            <ul class="chips" aria-label="Tecnologías de los paquetes NuGet">
+                                <li class="chip">.NET 8</li>
+                                <li class="chip">EntityFramework</li>
+                                <li class="chip">PostgreSQL</li>
+                            </ul>
+                        </div>
+
+                        <div class="subbloques">
+                            <div class="subbloque">
+                                <div class="subbloque__contenido">
+                                    <h4>Mapeador de objetos</h4>
+                                    <p class="proyecto__descripcion">
+                                        Mapeador de objetos ligero y de alto rendimiento para .NET.
+                                        Alternativa perfecta a AutoMapper para escenarios de asignación
+                                        simples a moderados con una sobrecarga mínima.
+                                    </p>
+                                </div>
+                                <div class="subbloque__medios">
+                                    <div class="proyecto__marco">
+                                        <img
+                                            class="proyecto__imagen"
+                                            src="/images/mapping.png"
+                                            alt="Paquete NuGet de mapeo de objetos"
+                                            width="692"
+                                            height="317"
+                                            loading="lazy"
+                                            decoding="async"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subbloque subbloque--invertido">
+                                <div class="subbloque__contenido">
+                                    <h4>Constructor de filtros dinámicos</h4>
+                                    <p class="proyecto__descripcion">
+                                        Clase genérica en C# para construir filtros dinámicos
+                                        utilizando expresiones lambda
+                                        (<code>Expression&lt;Func&lt;T, bool&gt;&gt;</code>). Ideal para
+                                        aplicaciones con Entity Framework Core, LINQ to Objects o
+                                        cualquier fuente de datos que soporte expresiones.
+                                    </p>
+                                </div>
+                                <div class="subbloque__medios">
+                                    <div class="proyecto__marco">
+                                        <img
+                                            class="proyecto__imagen"
+                                            src="/images/filter.png"
+                                            alt="Constructor de filtros dinámicos con expresiones lambda"
+                                            width="693"
+                                            height="264"
+                                            loading="lazy"
+                                            decoding="async"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="seccion contacto" aria-labelledby="contacto-titulo">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <h2 id="contacto-titulo">Contacto</h2>
+                    <p class="seccion-encabezado__contexto">
+                        ¿Tenés una idea o proyecto en mente? Enviame un mensaje y te responderé lo antes posible.
+                    </p>
+                </div>
+
+                <form id="contact-form" class="contacto__formulario" novalidate>
+                    <div class="campo">
+                        <label class="campo__etiqueta" for="name">Nombre</label>
+                        <input
+                            class="campo__control"
+                            type="text"
+                            id="name"
+                            name="name"
+                            autocomplete="name"
+                            required
+                            aria-describedby="name-error"
+                            aria-invalid="false"
+                        >
+                        <p class="campo__error" id="name-error" hidden></p>
+                    </div>
+
+                    <div class="campo">
+                        <label class="campo__etiqueta" for="email">Correo</label>
+                        <input
+                            class="campo__control"
+                            type="email"
+                            id="email"
+                            name="email"
+                            inputmode="email"
+                            autocomplete="email"
+                            required
+                            aria-describedby="email-error"
+                            aria-invalid="false"
+                        >
+                        <p class="campo__error" id="email-error" hidden></p>
+                    </div>
+
+                    <div class="campo">
+                        <label class="campo__etiqueta" for="message">Mensaje</label>
+                        <textarea
+                            class="campo__control campo__control--textarea"
+                            id="message"
+                            name="message"
+                            rows="6"
+                            autocomplete="off"
+                            required
+                            aria-describedby="message-error"
+                            aria-invalid="false"
+                        ></textarea>
+                        <p class="campo__error" id="message-error" hidden></p>
+                    </div>
+
+                    <button type="submit" class="boton boton--primario contacto__enviar">
+                        Enviar mensaje
+                    </button>
+
+                    <p id="contact-status" class="contacto__estado" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="contenedor site-footer__interior">
+            <p class="site-footer__copyright">
+                © <span data-anio-actual>2026</span> Gabriel Aballay · Desarrollador .NET
+            </p>
+
+            <ul class="site-footer__contacto">
+                <li>
+                    <a href="mailto:aballaygabriel@gmail.com">aballaygabriel@gmail.com</a>
+                </li>
+                <li>
+                    <a
+                        href="https://linkedin.com/in/gabriel-aballay-a2746a164"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >LinkedIn<span class="visualmente-oculto"> (se abre en una nueva pestaña)</span></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
