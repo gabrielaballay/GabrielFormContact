@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/',
+  base: '/GabrielFormContact/',
   build: {
     target: 'es2020'
   }
