@@ -42,6 +42,8 @@ Estado persistente del proceso SDD. Registrar solo decisiones confirmadas y resu
 - Repositorio git publicado: rama `portfolio` en `origin` → `https://github.com/gabrielaballay/GabrielFormContact/tree/portfolio`, commits `ef15ae1` (implementación) y `01e2c14` (docs). `main` no fue tocada; push completado (2026-10-30).
 - `.gitignore` excluye `node_modules/` y `dist/`; el commit incluye 32 archivos (src, public/images, docs, specs, configuración).
 
+- **Deploy:** GitHub Pages de proyecto en `https://gabrielaballay.github.io/GabrielFormContact/`; `base` cambiado a `/GabrielFormContact/`; workflow `.github/workflows/deploy.yml` (build `dist/` + deploy). Validación de la URL pública pendiente. La Function App respondió **503** (“Function host is not running”) durante la validación: el backend debe arrancarse.
+
 ## Próximo paso propuesto
 
-- T8 (post-despliegue) y `/sdd-validate` para cerrar la spec 001.
+- Ejecutar el workflow de Pages y validar `https://gabrielaballay.github.io/GabrielFormContact/`; arrancar la Function App y validar T8; luego `/sdd-validate`.

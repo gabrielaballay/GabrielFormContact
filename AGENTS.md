@@ -6,7 +6,7 @@ Portafolio profesional de Gabriel Aballay. Proyecto **Vite vanilla** (HTML/CSS/J
 
 ```
 npm install
-npm run dev      # servidor de desarrollo (http://localhost:5173)
+npm run dev      # servidor de desarrollo (http://localhost:5173/GabrielFormContact/)
 npm run build    # build de producción en dist/
 npm run preview  # sirve el build
 ```
@@ -29,3 +29,4 @@ No hay framework de tests. Validar con `build`/`preview`, checklist manual y Lig
 3. **Diseño:** usar los tokens de `src/styles/tokens.css`; fuentes autoalojadas con `@fontsource` (Archivo + Newsreader), sin CDN ni Bootstrap.
 4. **Idioma:** documentos y UI en **español**.
 5. **SDD:** no avanzar de fase sin aprobación explícita; la spec aprobada gobierna el código. Estado y decisiones en `MEMORY.md`.
+6. **Despliegue:** GitHub Pages de proyecto en `https://gabrielaballay.github.io/GabrielFormContact/`; `base: '/GabrielFormContact/'` en `vite.config.js`. El workflow `.github/workflows/deploy.yml` publica `dist/`; Pages debe estar en modo **GitHub Actions**.
