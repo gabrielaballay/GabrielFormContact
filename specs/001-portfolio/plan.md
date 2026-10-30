@@ -55,7 +55,7 @@ Leyenda de estado de cada decisión:
 1. [CONFIRMADO] `index.html` permanece en la **raíz**, no en `src/`. Es la convención de Vite para sitios de una sola página y evita configuración extra de `rollupOptions.input`.
 2. [CONFIRMADO] Estilos en **3 archivos CSS** importados desde `main.js`. Se descarta un único archivo (difícil de mantener al crecer) y se descarta un archivo por sección (fragmentación excesiva que la constitución §9 desaconseja).
 3. [CONFIRMADO] JavaScript en **módulos ES** separados por comportamiento, sin librerías. Estimación: < 6 KB de JS propio.
-4. [CONFIRMADO] `vite.config.js` mínimo. Solo se fija `build.target: 'es2020'` y `base: '/'` (deploy en la raíz del host `gabrielaballay.github.io`, [CONFIRMADO]).
+4. [CONFIRMADO] `vite.config.js` mínimo. Solo se fija `build.target: 'es2020'` y `base: '/GabrielFormContact/'` (deploy en `https://gabrielaballay.github.io/GabrielFormContact/`, [CONFIRMADO]).
 5. [CONFIRMADO] Sin Bootstrap, sin jQuery, sin librería de iconos.
 6. [CONFIRMADO] Sin frameworks de testing en `devDependencies`. Detalle y justificación en §8.
 
@@ -323,7 +323,7 @@ Sin requisitos huérfanos y sin componentes del plan que no respondan a un RF/RN
 ### Supuestos
 
 - [SUPUESTO] Se conservan los 4 proyectos y sus imágenes; solo se ajustan textos.
-- [CONFIRMADO] El sitio se despliega en la raíz del host `gabrielaballay.github.io`, por lo que `base: '/'`. Si se publica en un subpath, cambiaría `vite.config.js`.
+- [CONFIRMADO] El sitio se despliega en `https://gabrielaballay.github.io/GabrielFormContact/` (GitHub Pages de proyecto), por lo que `base: '/GabrielFormContact/'`; el workflow `.github/workflows/deploy.yml` publica `dist/`.
 - [SUPUESTO] El endpoint funciona igual desde un origen `http://localhost` y desde el dominio final.
 - [SUPUESTO] No hay requisitos de analítica ni cookies.
 
@@ -344,4 +344,4 @@ Sin requisitos huérfanos y sin componentes del plan que no respondan a un RF/RN
 6. **Footer:** correo `aballaygabriel@gmail.com` + LinkedIn `https://linkedin.com/in/gabriel-aballay-a2746a164`.
 7. **Validación:** sin framework de tests; checklist manual + `npm run build`/`preview` + Lighthouse.
 8. **Copy:** reescrituras de "Servicios" y de los `alt` de imágenes (texto final con revisión previa del usuario).
-9. **Despliegue:** `gabrielaballay.github.io` en raíz → `base: '/'`.
+9. **Despliegue:** `https://gabrielaballay.github.io/GabrielFormContact/` (Pages de proyecto) → `base: '/GabrielFormContact/'`; workflow `.github/workflows/deploy.yml`.

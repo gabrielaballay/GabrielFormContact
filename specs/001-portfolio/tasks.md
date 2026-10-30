@@ -19,6 +19,7 @@ Plan: `specs/001-portfolio/plan.md`
   - Estimación: ~25 min.
   - Resultado real (2026-10-28): Node 26.3.0 / npm 11.16.0 / Vite 8.3.5. Creados `package.json`, `vite.config.js`, `.gitignore`, `src/main.js`, `package-lock.json`; 8 imágenes movidas a `public/images/` y `Principal.jpg` → `principal.jpg`. `npm install`, `npm run build` y `npm run dev` (HTTP 200 en `localhost:5173`) ejecutados; `dist/images/` con 8 archivos; 0 referencias a `Principal.jpg`, `cdn.jsdelivr.net`, `bootstrap` y `data-bs` en `index.html`/`src/`.
   - Revisión independiente (`reviewer`): aprobada con observaciones, sin hallazgos críticos ni altos. H-2 (bloque comentado `rabbit2.png`) y H-3 (clases Bootstrap residuales en el marcado) se difieren a T5/T10; la evidencia de ejecución provista por el implementer se considera válida.
+  - Corrección 2026-10-30: `base` cambiado a `/GabrielFormContact/` por despliegue en GitHub Pages de proyecto; build verificado.
 
 - [x] **T2. Sistema visual: tokens, tipografía y base.** RNF-1, RNF-2, RNF-3, RNF-4
   - Resultado esperado: `src/styles/tokens.css` (paleta §3.2, radios, espaciado, escala tipográfica), `src/styles/base.css` (reset, escala fluida con `clamp`, contenedor 1120px, padding lateral y vertical por sección, foco `2px var(--cobalto)` con `offset 3px`, `overflow-wrap`, `prefers-reduced-motion`) y fuentes Archivo + Newsreader autoalojadas vía `@fontsource` (subconjunto latino, `font-display: swap`), importadas desde `src/main.js`.
@@ -86,6 +87,7 @@ Plan: `specs/001-portfolio/plan.md`
   - Depende de: T7.
   - Estimación: ~30 min.
   - Resultado real (2026-10-30): `src/js/contact.js` envía POST al endpoint actual con `Name`/`Email`/`Message`/`Token` y `Content-Type: application/json`; estados reposo/enviando/éxito/error HTTP/error de red, `aria-live`, `aria-busy`, `AbortController` 15 s y guardia de doble envío; sin `alert()`. 39/39 comprobaciones CDP OK (offline, error 500 interceptado, timeout, doble clic). **Limitación real:** CORS solo autoriza `https://gabrielaballay.github.io`; desde `localhost:4173/5173` el preflight devuelve 400 y el envío real queda bloqueado (éxito verificado con 200 interceptado). Pendiente: aceptación manual y validación del camino feliz desde el origen permitido. Decisión del usuario (2026-10-30): opción b — validar tras desplegar en `https://gabrielaballay.github.io`.
+  - Validación de la URL pública (2026-10-30): la Function App respondió **503 “Function host is not running”**; el backend debe arrancarse antes de validar el envío real.
   - Revisión integral: **H-1 (alto) abierto** — CORS del endpoint; no aceptable hasta validar el camino feliz desde el origen autorizado.
 
 - [x] **T9. Footer, responsive transversal y accesibilidad.** RF-9, RNF-2, RNF-4, RNF-6
@@ -105,6 +107,7 @@ Plan: `specs/001-portfolio/plan.md`
   - Estimación: ~30 min.
   - Resultado real (2026-10-30): checklist §8 ejecutado sobre `npm run preview` (puerto 4317). 10/11 ítems aprobados; ítem 3 (camino feliz del formulario) **bloqueado por CORS externo** (preflight 400; solo `https://gabrielaballay.github.io` autorizado). Lighthouse móvil: LCP 1,696 s, CLS 0,00534, 0 errores de consola; Performance 99, Accessibility 100, Best Practices 100, SEO 83. Build OK (12 módulos); 8 imágenes en `dist/images/` con `principal.jpg`; 0 referencias a `Principal.jpg`, `cdn.jsdelivr.net`, `bootstrap`, `data-bs`, `alert(` o `carousel` en `index.html`/`src/`/`dist/`.
   - Revisión independiente integral: se ejecuta a continuación sobre T1–T10.
+  - Corrección de despliegue 2026-10-30: `base` `/GabrielFormContact/`, workflow `.github/workflows/deploy.yml`, `public/.nojekyll` y `data-src` relativos; validación de la URL pública pendiente.
 
 ## Cobertura
 
